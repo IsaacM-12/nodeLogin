@@ -4,4 +4,5 @@
 
 ## Para correrlo 
 npm install
+
 npm run start 
