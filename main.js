@@ -27,10 +27,6 @@ router.get('/login', (req, res) => {
     res.render('login');
     });
 
-router.get('/welcome', (req, res) => {
-    res.render('welcome');
-    });
-
 // Ruta para procesar el formulario de inicio de sesión
 router.post('/login', (req, res) => {
     const { username, password } = req.body;
@@ -68,3 +64,22 @@ router.post('/register', function (req, res) {
 
 });
 
+router.get('/welcome', (req, res) => {
+    res.render('welcome');
+    });
+
+router.get('/', (req, res) => {
+    res.render('Inicio');
+    });
+
+    
+router.post('/', (req, res) => {
+    const action = req.body.action;
+    if (action === 'login') {
+        // Redirigir al usuario a la página de inicio de sesión
+        res.redirect('/login');
+    } else if (action === 'register') {
+        // Redirigir al usuario a la página de inicio de sesión
+        res.redirect('/register');
+    }
+    });

@@ -2,7 +2,7 @@
 <html lang="es">
 
     <head>
-        <title>Login</title>
+        <title>Inicio</title>
         <style>
            body {
             margin: 0;
@@ -64,26 +64,22 @@
     </head>
 
     <body id="full-page-div">
-        <br><br>
-        <h1>Iniciar sesión</h1>
-
-        <form action="/login" method="POST">
-            <div>
-                <label for="username">Nombre de usuario:</label><br>
-                <input type="text" id="username" name="username" required>
-            </div>
-            
-            <br>
-            
-            <div>
-                <label for="password">Contraseña:</label><br>
-                <input type="password" id="password" name="password" required>
-            </div>
-            
+        <div>
             <br><br>
-            
-            <button type="submit" class="button">Ingresar</button>
-        </form>
+            <h1>Que desea hacer</h1><br>
+        </div>
+
+        <div>
+            <form action="/" method="POST">
+                
+                <button type="submit" name="action" value="login">Iniciar sesión</button>
+                
+                <br><br><br>
+                
+                <button type="submit" name="action" value="register">Registrarse</button>
+
+            </form>
+        </div>
     </body>
 
 </html>
